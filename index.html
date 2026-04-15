@@ -106,16 +106,17 @@ header.scrolled {
   letter-spacing: 0.12em;
   font-size: 0.78rem;
   text-transform: uppercase;
-  padding: 14px 36px;
+  padding: 15px 38px;
   border-radius: 8px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease-out, transform 0.3s ease-out;
+  box-shadow: 0 4px 18px rgba(196,168,130,0.32), 0 1px 4px rgba(58,58,58,0.10);
+  transition: background 0.3s ease-out, transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
-.btn-primary:hover { background: #B08E6A; }
+.btn-primary:hover { background: #B08E6A; box-shadow: 0 8px 28px rgba(196,168,130,0.42), 0 2px 6px rgba(58,58,58,0.10); transform: translateY(-1px); }
 .btn-primary:focus-visible { outline: 2px solid #C4A882; outline-offset: 3px; }
-.btn-primary:active { transform: translateY(1px); }
+.btn-primary:active { transform: translateY(1px); box-shadow: 0 2px 8px rgba(196,168,130,0.22); }
 
 .section-label {
   font-family: 'Lato', sans-serif;
@@ -141,10 +142,18 @@ header.scrolled {
 .feature-photo {
   width: 100%;
   aspect-ratio: 3 / 4;
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
-  background: #DDD8D2;
-  box-shadow: rgba(58, 58, 58, 0.12) 0 22px 44px;
+  background: linear-gradient(160deg, #DDD8D2 0%, #C8BEB4 100%);
+  box-shadow: rgba(58,58,58,0.14) 0 28px 56px, rgba(196,168,130,0.16) 0 6px 20px;
+  position: relative;
+}
+.feature-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(58,58,58,0.12) 100%);
+  pointer-events: none;
 }
 
 .feature-photo img,
@@ -157,9 +166,10 @@ header.scrolled {
 
 .listing-card {
   background: #fff;
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: rgba(58, 58, 58, 0.08) 0 18px 42px;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: rgba(58,58,58,0.10) 0 24px 56px, rgba(58,58,58,0.04) 0 4px 12px;
+  border-top: 3px solid #C4A882;
 }
 
 .listing-grid {
@@ -239,8 +249,11 @@ header.scrolled {
 .listing-summary-item {
   background: #FAF7F4;
   border-radius: 12px;
-  padding: 16px 14px;
+  padding: 18px 16px;
+  border: 1px solid #EDE6DC;
+  transition: background 0.3s ease-out;
 }
+.listing-summary-item:hover { background: #F0EAE2; }
 
 .listing-summary-item strong {
   display: block;
@@ -321,9 +334,15 @@ input:focus, textarea:focus { border-color: #3A3A3A; }
 
 .review-card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: rgba(0,0,0,0.06) 0 4px 20px;
+  border-radius: 12px;
+  box-shadow: rgba(58,58,58,0.07) 0 8px 32px, rgba(58,58,58,0.04) 0 2px 8px;
   padding: 36px 32px 32px;
+  border-top: 3px solid #C4A882;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(58,58,58,0.12) 0 16px 44px, rgba(58,58,58,0.05) 0 4px 12px;
 }
 
 .initials-circle {
@@ -346,6 +365,65 @@ input:focus, textarea:focus { border-color: #3A3A3A; }
   .hero-inner > div:first-child { width: 220px; max-width: 60vw; }
   .hero-inner > div:last-child { text-align: center; }
 }
+.why-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 28px 36px;
+  text-align: center;
+  box-shadow: rgba(58,58,58,0.06) 0 8px 28px, rgba(58,58,58,0.03) 0 2px 6px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #C4A882, #DDB98E);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.why-card:hover { transform: translateY(-6px); box-shadow: rgba(58,58,58,0.12) 0 20px 48px, rgba(58,58,58,0.05) 0 4px 12px; }
+.why-card:hover::before { opacity: 1; }
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-stat strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #3A3A3A;
+  line-height: 1;
+}
+.hero-stat span {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9A8E86;
+  font-weight: 300;
+  margin-top: 4px;
+}
+
+.section-divider {
+  width: 40px;
+  height: 1px;
+  background: #C4A882;
+  display: block;
+  margin: 0 auto 20px;
+}
+.section-divider-left {
+  width: 40px;
+  height: 1px;
+  background: #C4A882;
+  display: block;
+  margin: 0 0 20px;
+}
+
 footer a { transition: color 0.3s ease-out; }
 footer a:hover { color: #C4A882; }
 footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border-radius: 2px; }
@@ -394,7 +472,14 @@ footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border
   <div style="text-align:left;flex:1;">
     <div class="hero-item animate" style="font-family:'Lato',sans-serif;font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:#C4A882;font-weight:300;margin-bottom:28px;">Domy. Apartamenty. Inwestycje.</div>
     <h1 class="hero-item animate" style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(52px,8vw,96px);letter-spacing:-0.03em;line-height:1.05;color:#3A3A3A;margin:0 0 32px;">Magdalena<br>Pawłowska</h1>
-    <p class="hero-item animate" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:clamp(18px,2.2vw,24px);color:#7A6E65;line-height:1.6;margin:0 0 52px;">„Pomogę Ci bezpiecznie sprzedać<br>lub kupić nieruchomość"</p>
+    <p class="hero-item animate" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:clamp(18px,2.2vw,24px);color:#7A6E65;line-height:1.6;margin:0 0 44px;">„Pomogę Ci bezpiecznie sprzedać<br>lub kupić nieruchomość"</p>
+    <div class="hero-item animate" style="display:flex;gap:36px;margin-bottom:48px;align-items:flex-start;">
+      <div class="hero-stat"><strong>100+</strong><span>transakcji</span></div>
+      <div style="width:1px;background:#DDD8D2;align-self:stretch;margin-top:4px;"></div>
+      <div class="hero-stat"><strong>10+</strong><span>lat doświadczenia</span></div>
+      <div style="width:1px;background:#DDD8D2;align-self:stretch;margin-top:4px;"></div>
+      <div class="hero-stat"><strong>KW</strong><span>Keller Williams</span></div>
+    </div>
     <a href="#contact" class="btn-primary hero-item animate">Umów rozmowę</a>
   </div>
   </div>
@@ -407,6 +492,7 @@ footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border
         <figure class="feature-photo" style="background:#DDD8D2;"></figure>
       </div>
       <div class="reveal" style="transition-delay:0.15s;">
+        <span class="section-divider-left"></span>
         <div class="section-label">O mnie</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;line-height:1.15;color:#3A3A3A;margin:0 0 28px;">Poznaj mnie</h2>
         <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:1rem;line-height:1.8;color:#5C5650;margin:0 0 20px;">Od wielu lat pomagam klientom w Katowicach i na całym Śląsku podejmować najważniejsze decyzje dotyczące nieruchomości. Specjalizuję się w domach jednorodzinnych, apartamentach premium oraz transakcjach inwestycyjnych, łącząc precyzję analityczną z głębokim zrozumieniem lokalnego rynku.</p>
@@ -419,42 +505,43 @@ footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border
 <section id="why" style="background:#F5F0EB;padding:100px 24px;">
   <div class="max-w-5xl mx-auto">
     <div style="text-align:center;margin-bottom:64px;" class="reveal">
+      <span class="section-divider"></span>
       <div class="section-label">Dlaczego ja</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;line-height:1.15;color:#3A3A3A;margin:0;">To, co mnie wyróżnia</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;" class="why-grid">
-      <div class="reveal" style="text-align:center;padding:32px 20px;">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 20px;display:block;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;" class="why-grid">
+      <div class="why-card reveal">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 24px;display:block;">
           <circle cx="20" cy="14" r="7" stroke="#C4A882" stroke-width="1.5" fill="none"/>
           <path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#C4A882" stroke-width="1.5" fill="none" stroke-linecap="round"/>
           <path d="M28 10c1.5 1 2.5 2.8 2.5 4.8" stroke="#C4A882" stroke-width="1.2" fill="none" stroke-linecap="round"/>
         </svg>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.2rem;color:#3A3A3A;margin:0 0 10px;letter-spacing:-0.01em;">Indywidualne podejście</h3>
-        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.7;color:#7A6E65;margin:0;">Każdy klient jest inny. Słucham i dostosowuję strategię do Twoich potrzeb.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.25rem;color:#3A3A3A;margin:0 0 12px;letter-spacing:-0.01em;">Indywidualne podejście</h3>
+        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.75;color:#7A6E65;margin:0;">Każdy klient jest inny. Słucham i dostosowuję strategię do Twoich potrzeb.</p>
       </div>
-      <div class="reveal" style="text-align:center;padding:32px 20px;transition-delay:0.1s;">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 20px;display:block;">
+      <div class="why-card reveal" style="transition-delay:0.1s;">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 24px;display:block;">
           <path d="M20 4C13.373 4 8 9.373 8 16c0 9 12 20 12 20s12-11 12-20c0-6.627-5.373-12-12-12z" stroke="#C4A882" stroke-width="1.5" fill="none"/>
           <circle cx="20" cy="16" r="4" stroke="#C4A882" stroke-width="1.5" fill="none"/>
         </svg>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.2rem;color:#3A3A3A;margin:0 0 10px;letter-spacing:-0.01em;">Znajomość rynku śląskiego</h3>
-        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.7;color:#7A6E65;margin:0;">Katowice i okolice to mój teren. Znam ceny, trendy i najlepsze lokalizacje.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.25rem;color:#3A3A3A;margin:0 0 12px;letter-spacing:-0.01em;">Znajomość rynku śląskiego</h3>
+        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.75;color:#7A6E65;margin:0;">Katowice i okolice to mój teren. Znam ceny, trendy i najlepsze lokalizacje.</p>
       </div>
-      <div class="reveal" style="text-align:center;padding:32px 20px;transition-delay:0.2s;">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 20px;display:block;">
+      <div class="why-card reveal" style="transition-delay:0.2s;">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 24px;display:block;">
           <path d="M20 4L8 9v10c0 8.284 5.226 15.996 12 18.928C26.774 34.996 32 27.284 32 19V9L20 4z" stroke="#C4A882" stroke-width="1.5" fill="none"/>
           <path d="M14 20l4 4 8-8" stroke="#C4A882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.2rem;color:#3A3A3A;margin:0 0 10px;letter-spacing:-0.01em;">Bezpieczna transakcja</h3>
-        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.7;color:#7A6E65;margin:0;">Pełna weryfikacja prawna i dokumentacyjna na każdym etapie.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.25rem;color:#3A3A3A;margin:0 0 12px;letter-spacing:-0.01em;">Bezpieczna transakcja</h3>
+        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.75;color:#7A6E65;margin:0;">Pełna weryfikacja prawna i dokumentacyjna na każdym etapie.</p>
       </div>
-      <div class="reveal" style="text-align:center;padding:32px 20px;transition-delay:0.3s;">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 20px;display:block;">
+      <div class="why-card reveal" style="transition-delay:0.3s;">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 24px;display:block;">
           <rect x="8" y="6" width="24" height="28" rx="3" stroke="#C4A882" stroke-width="1.5" fill="none"/>
           <path d="M13 14h14M13 20h14M13 26h8" stroke="#C4A882" stroke-width="1.3" stroke-linecap="round"/>
         </svg>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.2rem;color:#3A3A3A;margin:0 0 10px;letter-spacing:-0.01em;">Pełna obsługa od A do Z</h3>
-        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.7;color:#7A6E65;margin:0;">Wycena, marketing, negocjacje, umowa – zajmuję się wszystkim.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.25rem;color:#3A3A3A;margin:0 0 12px;letter-spacing:-0.01em;">Pełna obsługa od A do Z</h3>
+        <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.88rem;line-height:1.75;color:#7A6E65;margin:0;">Wycena, marketing, negocjacje, umowa – zajmuję się wszystkim.</p>
       </div>
     </div>
   </div>
@@ -463,6 +550,7 @@ footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border
 <section id="listings" style="background:#F5F0EB;padding:100px 24px;">
   <div class="max-w-5xl mx-auto">
     <div style="text-align:center;margin-bottom:64px;" class="reveal">
+      <span class="section-divider"></span>
       <div class="section-label">Nieruchomo&#347;ci na sprzeda&#380;</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;line-height:1.15;color:#3A3A3A;margin:0 0 18px;">Wybrane oferty</h2>
       <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:1rem;line-height:1.8;color:#6E665F;max-width:720px;margin:0 auto;">Jedna aktualna oferta premium: apartament second home w Siano&#380;&#281;tach, zaledwie 200 m od pla&#380;y i kilka minut od trasy Velo Baltica.</p>
@@ -516,6 +604,7 @@ footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border
 <section id="reviews" style="background:#FAF7F4;padding:100px 24px;">
   <div class="max-w-5xl mx-auto">
     <div style="text-align:center;margin-bottom:64px;" class="reveal">
+      <span class="section-divider"></span>
       <div class="section-label">Opinie klientów</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;line-height:1.15;color:#3A3A3A;margin:0;">Co mówią o mnie klienci</h2>
     </div>
@@ -560,6 +649,7 @@ footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border
 <section id="contact" style="background:#F5F0EB;padding:100px 24px;">
   <div class="max-w-5xl mx-auto">
     <div style="text-align:center;margin-bottom:64px;" class="reveal">
+      <span class="section-divider"></span>
       <div class="section-label">Kontakt</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;line-height:1.15;color:#3A3A3A;margin:0;">Porozmawiajmy</h2>
     </div>
@@ -633,7 +723,7 @@ footer a:focus-visible { outline: 2px solid #C4A882; outline-offset: 2px; border
 
 </main>
 
-<footer style="background:#3A3A3A;padding:40px 24px;">
+<footer style="background:#2E2E2E;padding:44px 24px;border-top:3px solid #C4A882;">
   <div class="max-w-5xl mx-auto" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
     <p style="font-family:'Lato',sans-serif;font-weight:300;font-size:0.82rem;color:#8A8480;margin:0;letter-spacing:0.04em;">© 2025 Magdalena Pawłowska | Keller Williams Śląsk</p>
     <a href="https://www.instagram.com/pawlowska.realestate/" target="_blank" rel="noopener noreferrer" style="color:#8A8480;display:flex;align-items:center;">
