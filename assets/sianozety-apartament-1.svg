@@ -1,0 +1,60 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wall" x1="450" y1="0" x2="450" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F1EA"/>
+      <stop offset="1" stop-color="#E4D8CA"/>
+    </linearGradient>
+    <linearGradient id="window" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#DFF0FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="sofa" x1="167" y1="777" x2="552" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CDBBA8"/>
+      <stop offset="1" stop-color="#B29C87"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="422" y1="67" x2="422" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8B57A"/>
+      <stop offset="1" stop-color="#B98F50"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#wall)"/>
+  <rect x="55" y="258" width="215" height="544" rx="12" fill="url(#window)"/>
+  <rect x="635" y="258" width="210" height="544" rx="12" fill="url(#window)"/>
+  <rect x="91" y="253" width="50" height="564" fill="#D4C8BA"/>
+  <rect x="187" y="253" width="50" height="564" fill="#D4C8BA"/>
+  <rect x="661" y="253" width="50" height="564" fill="#D4C8BA"/>
+  <rect x="754" y="253" width="50" height="564" fill="#D4C8BA"/>
+  <rect x="0" y="1100" width="900" height="100" fill="#D4C2AE"/>
+  <rect x="157" y="875" width="461" height="220" rx="36" fill="url(#sofa)"/>
+  <rect x="137" y="819" width="412" height="125" rx="42" fill="#C4AF99"/>
+  <rect x="186" y="845" width="110" height="110" rx="16" fill="#F3F1EE"/>
+  <rect x="310" y="845" width="92" height="110" rx="16" fill="#D6D1CB"/>
+  <rect x="489" y="853" width="87" height="104" rx="16" fill="#12374D"/>
+  <rect x="594" y="856" width="69" height="105" rx="16" fill="#17384E"/>
+  <rect x="217" y="994" width="121" height="38" rx="19" fill="#C5AD8B"/>
+  <rect x="376" y="1002" width="110" height="32" rx="16" fill="#C5AD8B"/>
+  <rect x="313" y="1028" width="219" height="27" rx="13.5" fill="#A38E79"/>
+  <g opacity="0.92">
+    <path d="M453 219C442 194 440 164 452 138C472 95 523 75 561 97C598 118 611 171 586 211C565 245 514 258 475 239L453 219Z" fill="url(#gold)"/>
+    <path d="M492 151C530 124 582 146 592 192C603 245 551 288 499 268C455 251 444 185 492 151Z" fill="#DCC290"/>
+    <path d="M420 115C450 86 499 88 524 119C554 156 535 214 491 226C446 239 388 192 403 145C407 134 412 123 420 115Z" fill="#E2C99C"/>
+    <path d="M317 110C356 93 397 112 409 150C425 201 381 251 329 236C278 221 264 139 317 110Z" fill="#C79F65"/>
+    <path d="M262 151C298 129 347 149 356 192C366 239 324 279 279 270C232 261 214 182 262 151Z" fill="#D7B37D"/>
+    <path d="M196 194C225 160 273 158 302 189C335 223 319 279 277 292C231 306 177 262 189 216L196 194Z" fill="#E2C99C"/>
+    <path d="M605 175C641 151 691 167 707 210C726 261 682 314 626 307C572 301 539 236 574 191L605 175Z" fill="#C79F65"/>
+    <path d="M661 128C698 114 738 136 749 173C762 217 729 260 684 257C638 254 615 186 650 145L661 128Z" fill="#DFC392"/>
+    <path d="M377 225C400 188 447 176 483 199C524 226 529 290 489 321C451 351 387 330 365 286C353 263 357 239 377 225Z" fill="#E6CFAB"/>
+    <path d="M566 246C595 220 639 223 664 251C694 285 687 342 649 367C610 392 552 377 530 333C514 300 534 267 566 246Z" fill="#DAB983"/>
+  </g>
+  <path d="M240 1040L320 922L402 1040H240Z" fill="#FDFBF8"/>
+  <rect x="294" y="878" width="49" height="88" rx="10" fill="#A29D92"/>
+  <rect x="254" y="1013" width="138" height="16" rx="8" fill="#D8D0C5"/>
+  <path d="M318 902C307 860 284 829 249 811C268 862 274 899 271 955L318 902Z" fill="#F7F3EB"/>
+  <path d="M341 899C351 857 374 825 408 807C389 856 382 894 387 950L341 899Z" fill="#F7F3EB"/>
+  <rect x="523" y="499" width="155" height="18" rx="9" fill="#B2A290"/>
+  <rect x="552" y="449" width="96" height="50" rx="4" fill="#D8C8B6"/>
+  <rect x="567" y="515" width="65" height="23" rx="4" fill="#64594D"/>
+  <circle cx="600" cy="475" r="19" fill="#D7D1C7"/>
+  <circle cx="572" cy="475" r="18" fill="#D7D1C7"/>
+  <text x="92" y="1068" fill="#D81920" font-family="Arial, sans-serif" font-size="94" font-weight="700">kw</text>
+</svg>

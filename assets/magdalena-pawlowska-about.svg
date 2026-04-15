@@ -1,0 +1,49 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="760" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F4F4"/>
+      <stop offset="1" stop-color="#D3D3D3"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="236" y1="448" x2="617" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#232323"/>
+      <stop offset="1" stop-color="#090909"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="382" y1="282" x2="537" y2="623" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3DDD0"/>
+      <stop offset="1" stop-color="#D0B0A1"/>
+    </linearGradient>
+    <filter id="shadow" x="120" y="160" width="660" height="860" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="34" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <path d="M94 0H378V1200H94V0Z" fill="#ECECEC"/>
+  <path d="M662 0H900V1200H662V0Z" fill="#DEDEDE"/>
+  <g filter="url(#shadow)">
+    <path d="M315 801C315 725 378 662 455 662C531 662 594 725 594 801V914H315V801Z" fill="#0E0E0E"/>
+    <ellipse cx="452" cy="934" rx="252" ry="68" fill="#B9B9B9" fill-opacity="0.46"/>
+    <path d="M318 884C318 816 373 762 441 762H473C540 762 595 816 595 884V988H318V884Z" fill="url(#coat)"/>
+    <path d="M382 512C358 541 342 579 342 628V778H603V629C603 577 588 537 561 507L382 512Z" fill="url(#coat)"/>
+    <path d="M392 513L449 595L511 513H392Z" fill="#FFFFFF"/>
+    <path d="M443 520H470V776H443V520Z" fill="#FFFFFF"/>
+    <path d="M332 599C286 626 250 685 242 759L212 1036H343L384 732L332 599Z" fill="#111111"/>
+    <path d="M582 611C638 643 677 708 686 785L711 1084H566L542 787L582 611Z" fill="#111111"/>
+    <path d="M487 751C552 780 600 843 616 919L649 1076H487V751Z" fill="#111111"/>
+    <path d="M391 755C325 775 269 829 243 905L191 1073H391V755Z" fill="#111111"/>
+    <path d="M415 731C437 713 468 710 492 727C522 748 530 790 510 821C492 849 454 857 426 839C396 820 392 765 415 731Z" fill="url(#skin)"/>
+    <path d="M487 777C511 758 543 755 569 774C597 795 603 840 581 868C561 895 521 900 493 881C465 863 461 808 487 777Z" fill="url(#skin)"/>
+    <ellipse cx="457" cy="418" rx="118" ry="142" fill="url(#skin)"/>
+    <path d="M364 428C371 311 419 242 476 242C546 242 603 332 592 452L566 423C550 365 519 322 472 322C426 322 389 357 378 425L364 428Z" fill="#161616"/>
+    <path d="M335 428C340 313 395 192 500 192C617 192 699 299 669 440C650 527 598 564 572 574L566 520C607 483 627 436 620 385C611 317 558 254 498 254C431 254 389 300 375 374C368 412 367 460 380 518L360 583C311 551 332 487 335 428Z" fill="#141414"/>
+    <path d="M323 445C271 385 247 294 277 220C305 151 372 104 459 98C557 91 651 153 694 259C724 334 713 410 678 472C664 440 655 407 646 374C611 248 548 192 458 196C383 199 332 253 317 347C311 387 315 415 323 445Z" fill="#1A1A1A"/>
+    <path d="M308 307C318 242 357 186 425 162C505 133 611 155 680 243C726 301 751 372 738 445C730 488 711 526 684 560C680 470 650 388 603 319C546 235 467 201 400 225C358 241 326 267 308 307Z" fill="#101010"/>
+    <ellipse cx="414" cy="431" rx="12" ry="9" fill="#1D1D1D"/>
+    <ellipse cx="504" cy="431" rx="12" ry="9" fill="#1D1D1D"/>
+    <path d="M432 483C448 495 472 495 489 483" stroke="#7B6159" stroke-width="8" stroke-linecap="round"/>
+    <path d="M450 437C449 459 444 479 436 495" stroke="#B58C83" stroke-width="6" stroke-linecap="round"/>
+    <path d="M372 516C388 570 419 601 458 601C499 601 530 571 545 515L522 606C506 654 472 686 455 686C437 686 402 652 389 606L372 516Z" fill="#101010"/>
+    <path d="M284 1044C410 1020 528 1022 648 1044L685 1200H216L284 1044Z" fill="#171717"/>
+  </g>
+  <text x="80" y="132" fill="#D81920" font-family="Arial, sans-serif" font-size="116" font-weight="700">kw</text>
+  <text x="78" y="1080" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="72" font-weight="700">Witamy w zespole !</text>
+</svg>
